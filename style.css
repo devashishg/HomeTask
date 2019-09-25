@@ -43,7 +43,6 @@ span{
 .hrblock2{
     display: flex;
     float:'right';
-    width:20%;
     /*border: 1px solid  #11254d ;*/
 }
 .list{
@@ -68,10 +67,10 @@ button{
 
 select, input {
     width:200px;
-    border-style:  1px solid  #000000;
+    border:  2px solid  #000000;
     padding:8px;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .inp1{
@@ -80,8 +79,22 @@ select, input {
 .inp2{
     width:40%;
     float:left;
-    margin-left:-10px;
+    margin-left:-13px;
+    background:#000000;
+
+    color:#ffffff;
 }
 .sst{
     display:flex;
+}
+
+img{ 
+    padding-right:30px;
+}
+.foot{
+    background:#11254d;
+    padding:20px;
+    width:100%;
+    color: aliceblue;
+    font-size:15px;
 }
