@@ -16,6 +16,7 @@ html,body{
     width:100%;
     color: aliceblue;
     font-size: 25px;
+    position: static;
 }
 small{
     font-size: 13px;
@@ -88,7 +89,7 @@ select, input {
     float:left;
     margin-left:-13px;
     background:#000000;
-    color:#ffffff;
+    color:#3f3f3f;
     font-size:13px;
 }
 .sst{
@@ -104,4 +105,5 @@ img{
     width:100%;
     color: aliceblue;
     font-size:15px;
+    align-self: stretch;
 }
