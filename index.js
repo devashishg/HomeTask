@@ -1,12 +1,16 @@
 var set = new Set();
-localStorage.removeItem('flag');
+// localStorage.removeItem('flag');
+// localStorage.removeItem('Subscriptions');
+console.log(JSON.stringify(localStorage.getItem('Subscriptions')));
+
 if(localStorage.getItem('flag')!=0){
-    console.log('hi ');
-    var on = '{"array":[]}';
-    var ob = JSON.parse(on);
+    var on =[];
+    var ob = JSON.stringify(on);
+    console.log(ob);
     localStorage.setItem('flag',0);
-    localStorage.setItem('Subscriptions',JSON.stringify(ob));
+    localStorage.setItem('Subscriptions',ob);
 }
+
 
 
 //Header Only
@@ -169,7 +173,7 @@ var loadElement = (data)=>{
     input.required=true;
     inputdiv.appendChild(input);
     let Subscribe =document.createElement('button');
-    Subscribe.setAttribute("type","submit");
+    //Subscribe.setAttribute("type","submit");
     Subscribe.innerHTML="SUBSCRIBE";
     inputdiv.appendChild(Subscribe);
     
@@ -212,7 +216,7 @@ window.onclick = function(event) {
   }
 
 
-function filter(obj){
+let filter = (obj)=>{
     var str=obj.value;
     var elements = document.querySelectorAll('.hundred');
     //console.log(elements);
@@ -231,12 +235,11 @@ function filter(obj){
 }
 
 
-function save (obj1){
-    console.log(localStorage.getItem('Subscriptions'));
+let save = (obj1)=> {
+    console.log(JSON.parse(localStorage.getItem('Subscriptions')));
     var subsArray = JSON.parse(localStorage.getItem('Subscriptions'));
-    subsArray.array[subsArray.array.length]=obj1.email.value;
-    console.log(subsArray.array[0]);
-    localStorage.setItem('Subscriptions',subsArray);
+    subsArray.push(obj1.email.value);
+    localStorage.setItem('Subscriptions',JSON.stringify(subsArray));
     alert(`Hi ${obj1.email.value.split("@")[0]}, Thankyou for Subscribing!`);
 }
 
