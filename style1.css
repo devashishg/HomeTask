@@ -5,6 +5,8 @@
 .article-container {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 5px;
+    border-bottom : 1px solid 	#cccccc;
   }
   
   .seventy {
@@ -61,4 +63,37 @@
   padding-bottom: 50px;
   border: 1px solid #888;
   width: 80%;
+}
+
+
+
+Select{
+  width:350px;
+  border : 1px solid rgb(138, 134, 134);
+  padding : 10px;
+  font-size: 15px;
+  align-content: center;
+}
+
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 350px;
+}
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px -2px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid rgb(138, 134, 134);
+  width: 54%;
+}
+
+.form-inline button {
+  padding: 11px 5%;
+  background-color: black;
+  border: 1px solid #ddd;
+  color: white;
+  width: 40%;
 }
